@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "Removendo build antiga"
+rm -rf build
+mkdir build build/assembely build/utils
+
+echo "Compilando"
+nasm -f elf32 ./src/assembely/boot.asm -o ./build/assembely/boot.o
+
+gcc -m32 -I./include -c ./src/main.c -o ./build/main.o
+gcc -m32 -I./include -c ./src/utils/print.c -o ./build/utils/print.o
+gcc -m32 -I./include -c ./src/utils/clear.c -o ./build/utils/clear.o
+
+echo "Linkando"
+
+ld -m elf_i386 -T link.ld -o ./kernel ./build/assembely/boot.o ./build/main.o ./build/utils/print.o ./build/utils/clear.o
+
+read -r -p "Are you sure? [y/N] " response
+if [[ "$response" =~ ^([yY])$ ]]
+then
+    qemu-system-i386 -kernel kernel
+fi
