@@ -1,7 +1,9 @@
 #include "../include/utils.h"
 
 void startkernel() {
+  int line = 0;
+  char buffer[256];
+
   clear();
-  print("Yayyyyyy!", 0);
-  print("Yayyyyyy!2", 1);
-};
+  sh(line, buffer);
+}

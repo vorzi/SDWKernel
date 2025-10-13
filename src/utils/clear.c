@@ -7,7 +7,7 @@ void clear() {
   while (i < (80 * 25 * 2)) {
     vidmem[i] = ' ';
     i++;
-    vidmem[i] = WHITE_TEXT;
+    vidmem[i] = TEXT_BYTE;
     i++;
   };
 };
