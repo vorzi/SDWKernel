@@ -1,29 +1,6 @@
-***REMOVED***
+# SDWKernel
 
-***REMOVED***
+Experimental kernel written in C.
 
-***REMOVED***
-***REMOVED***
-***REMOVED***
-
-***REMOVED***
-
-***REMOVED***
-
-***REMOVED***
-
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***bash
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-
-***REMOVED***
-
-***REMOVED***
+> ⚠️ Deprecated — no longer maintained.
+> 📚 Study Project - Will probably never be updated.
